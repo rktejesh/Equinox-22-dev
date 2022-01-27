@@ -49,12 +49,12 @@
         colors: {
             roadColor: 0x080808,
             islandColor: 0x0a0a0a,
-            background: 0x000000,
-            shoulderLines: 0x131318,
+            background: 0x000D6b,
+            shoulderLines: 0xF8F8F8,
             brokenLines: 0x131318,
             /***  Only these colors can be an array ***/
             leftCars: [0xfaeb2c, 0xf52789, 0xe900ff],
-            rightCars: [0xA6F0C6, 0xFF6701, 0x7900FF],
+            rightCars: [0xFF1700, 0xFF6701, 0x7900FF],
             sticks: 0x03b3c3,
         },
     };
