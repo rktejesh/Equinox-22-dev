@@ -1,12 +1,9 @@
 (function () {
-
-    const container = document.getElementById('app');
+    const container = document.getElementById("app");
 
     const options = {
-        onSpeedUp: (ev) => {
-        },
-        onSlowDown: (ev) => {
-        },
+        onSpeedUp: (ev) => {},
+        onSlowDown: (ev) => {},
         distortion: turbulentDistortion,
 
         length: 400,
@@ -43,8 +40,8 @@
         // Width is percentage of a lane. Numbers from 0 to 1
         carWidthPercentage: [0.3, 0.5],
         // How drunk the driver is.
-        // carWidthPercentage's max + carShiftX's max -> Cannot go over 1. 
-        // Or cars start going into other lanes 
+        // carWidthPercentage's max + carShiftX's max -> Cannot go over 1.
+        // Or cars start going into other lanes
         carShiftX: [-0.8, 0.8],
         // Self Explanatory
         carFloorSeparation: [0, 5],
@@ -56,12 +53,12 @@
             shoulderLines: 0x131318,
             brokenLines: 0x131318,
             /***  Only these colors can be an array ***/
-            leftCars: [0xD856BF, 0x6750A2, 0xC247AC],
-            rightCars: [0x03B3C3, 0x0E5EA5, 0x324555],
-            sticks: 0x03B3C3,
-        }
+            leftCars: [0xfaeb2c, 0xf52789, 0xe900ff],
+            rightCars: [0xA6F0C6, 0xFF6701, 0x7900FF],
+            sticks: 0x03b3c3,
+        },
     };
 
     const myApp = new App(container, options);
-    myApp.loadAssets().then(myApp.init)
-})()
+    myApp.loadAssets().then(myApp.init);
+})();
