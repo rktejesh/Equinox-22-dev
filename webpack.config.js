@@ -8,6 +8,7 @@ const finalPath = path.resolve(__dirname, 'dist')
 module.exports = {
     mode: 'development',
     entry: './src/js/index.js',
+    devtool: 'source-map',
     output: {
         path: finalPath,
         filename: 'app.js',
