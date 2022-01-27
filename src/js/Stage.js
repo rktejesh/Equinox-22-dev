@@ -64,7 +64,6 @@ export default class Stage {
 
     onScroll({ limit, offset }) {
         this.progress = offset.x / limit.x
-
         TM.to(this.$els.title, 0.3, { x: -this.progress * offsetTitle, force3D: true })
         this.updateScrollBar()
     }
