@@ -8,7 +8,7 @@ export default class DetailView {
         this.$els = {
             el: document.querySelector('.detail-view'),
             closeBtn: document.querySelector('.close-detail'),
-            title: document.querySelector('.title'),
+            title: document.querySelector('.detail-view__title'),
         }
 
         this.bindEvent()
