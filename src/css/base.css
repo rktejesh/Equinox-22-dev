@@ -455,9 +455,6 @@ canvas {
     letter-spacing: 5px;
 }
 
-.Loader {
-    /* Keep ratio on resize*/
-}
 
 .Loader::before {
     content: "";

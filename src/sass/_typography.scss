@@ -16,11 +16,11 @@
 
 .title__offset {
     display: block;
-    margin-left: 15%;
+    margin-left: 25%;
 
     &--medium {
         @include minw($bp-mobile) {
-            margin-left: 10%;
+            margin-left: 20%;
         }
     }
 }
