@@ -587,3 +587,9 @@ canvas {
 .link--ersa:hover span {
     transform: scale3d(1.1, 1.1, 1.1);
 }
+
+@media only screen and (max-width: 768px) {
+    .mainEvents {
+        display: none;
+    }
+}

@@ -15,11 +15,11 @@ export default class Tile {
             el: $el,
             link: $el.querySelector('a'),
             text: $el.querySelectorAll('.tile__title, .tile__cta'),
-            title: $el.querySelector('.tile__title').innerText,
+            title: $el.querySelector('.tile__title'),
+            desc: $el.querySelectorAll('p'),
         }
 
         this.duration = duration
-
         this.mainImage = this.$els.el.querySelector('img')
         this.images = []
         this.sizes = new THREE.Vector2(0, 0)
@@ -68,12 +68,12 @@ export default class Tile {
 
         if (APP.Layout.isMobile) return
 
-        if (this.mesh) return
+        if (!this.mesh) return
 
-        this.hasClicked = false
+        this.hasClicked = true
 
         ev('toggleDetail', {
-            open: false,
+            open: true,
             target: this,
         })
     }

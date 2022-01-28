@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { TweenMax as TM, Power2, Power3, Power4, Expo } from 'gsap/all'
 import { SplitText as ST } from './vendors/gsap/SplitText'
 import { wrap, unwrap, ev } from './utils/utils'
@@ -9,8 +10,8 @@ export default class DetailView {
             el: document.querySelector('.detail-view'),
             closeBtn: document.querySelector('.close-detail'),
             title: document.querySelector('.detail-view__title'),
+            text: document.querySelector('.detail-view__text'),
         }
-
         this.bindEvent()
     }
 
@@ -27,9 +28,8 @@ export default class DetailView {
 
     onOpen() {
         const title = this.$els.el.querySelector('.detail-view__title')
-        const text = this.$els.el.querySelectorAll('p')
+        const text = this.$els.el.querySelector('.detail-view__text')
         const { title: pageTitle } = APP.Stage.$els
-
         this.stgs = new ST([title, text], { type: 'lines', linesClass: 'line' })
 
         this.stgs.lines.forEach((l) => {
@@ -101,8 +101,13 @@ export default class DetailView {
 
     toggleReveal({ shouldOpen, target }) {
         if (!shouldOpen) return
-
-        this.$els.title.innerText = target.$els.title
+        console.log(target.$els)
+        this.$els.title.innerText = target.$els.title.outerText
+        const a = target.$els.desc
+        $(this.$els.text).empty()
+        for (let i = 0; i < a.length; i++) {
+            this.$els.text.append(a[i])
+        }
         this.onOpen()
     }
 

@@ -1,6 +1,9 @@
 .slideshow {
     position: relative;
     width: 100%;
+    @include maxw(53em) {
+        padding-top: 50%;
+    }
 }
 
 .slideshow__progress-ctn {
@@ -15,6 +18,9 @@
     border-radius: .4rem;
 
     will-change: transform;
+    @include maxw(900px) {
+        bottom: -50%;
+    }
 }
 
 .slideshow__progress {
@@ -40,8 +46,8 @@
 .slideshow-list__el {
     flex: 0 0 auto;
     width: 100%;
-    min-width: 25rem;
-    max-width: 40vmin;
+    min-width: 15rem;
+    max-width: 45vmin;
     margin-left: 15vw;
     margin-right: 15vw;
 

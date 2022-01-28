@@ -40,11 +40,9 @@ export default class Scene {
 
         this.mouse = new THREE.Vector2(0, 0)
         this.activeTile = null
-
         this.start()
 
         this.detailview = new DetailView()
-
 
         this.bindEvent()
     }
