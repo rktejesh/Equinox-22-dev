@@ -1,6 +1,8 @@
+/* eslint-disable no-console */
 import { TweenMax as TM } from 'gsap/all'
 import Scrollbar from 'smooth-scrollbar'
 import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll'
+import { Options } from 'smooth-scrollbar/options'
 import { map } from './utils/utils'
 
 import Scene from './Scene'
@@ -23,6 +25,7 @@ export default class Stage {
             scene       : document.getElementById('scene'),
         }
 
+        this.$tiles = document.querySelectorAll('.slideshow-list__el')
 
         this.init()
 
@@ -31,7 +34,6 @@ export default class Stage {
 
     bindEvents() {
         document.addEventListener('lockScroll', ({ detail }) => { this.lockScroll(detail) })
-
         this.Scroll.addListener((s) => { this.onScroll(s) })
     }
 
@@ -39,7 +41,7 @@ export default class Stage {
         this.Scroll = Scrollbar.init(document.querySelector('.scrollarea'), {
             delegateTo: document,
             continuousScrolling : false,
-            overscrollEffect: 'bounce',
+            overscrollEffect: 'glow',
             damping: 0.05,
             plugins: {
                 horizontalScroll: {
@@ -51,13 +53,47 @@ export default class Stage {
         this.Scroll.track.xAxis.element.remove()
         this.Scroll.track.yAxis.element.remove()
 
+        document.getElementById('button-view__right').addEventListener('click', () => {
+            /* console.log(this.Scroll.scrollTop)
+            console.log(this.Scroll.scrollLeft)
+            this.Scroll.scrollTop += 100
+            this.Scroll.scrollLeft += 100
+            console.log(this.Scroll.scrollTop)
+            console.log(this.Scroll.scrollLeft)
+            console.log(this.$tiles) */
+            for (let i = 0; i < this.$tiles.length; i++) {
+                console.log(this.Scroll.isVisible(this.$tiles[i]))
+                if (this.Scroll.isVisible(this.$tiles[i]) && i < this.$tiles.length) {
+                    this.Scroll.scrollIntoView(
+                        this.$tiles[i + 1], {
+                            offsetLeft: 100,
+                        },
+                    )
+                    break
+                }
+            }
+        })
+
+        document.getElementById('button-view__left').addEventListener('click', () => {
+            for (let i = this.$tiles.length - 1; i >= 0; i--) {
+                console.log(this.Scroll.isVisible(this.$tiles[i]))
+                if (this.Scroll.isVisible(this.$tiles[i]) && i > 0) {
+                    this.Scroll.scrollIntoView(
+                        this.$tiles[i - 2], {
+                            offsetLeft: 100,
+                        },
+                    )
+                    break
+                }
+            }
+        })
+
         Scrollbar.detachStyle()
 
         this.updateScrollBar()
 
         this.scene = new Scene(this.$els.scene)
     }
-
 
     /* Handlers
     --------------------------------------------------------- */

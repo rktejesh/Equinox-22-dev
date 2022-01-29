@@ -307,8 +307,9 @@ export default class Tile {
             this.sizes.set(width, height)
         }
 
-        if (!this.offset.equals (
-            new THREE.Vector2(left - window.innerWidth / 2 + width / 2, -top + window.innerHeight / 2 - height / 2))) {
+        if (!this.offset.equals(
+            new THREE.Vector2(left - window.innerWidth / 2 + width / 2, -top + window.innerHeight / 2 - height / 2),
+        )) {
             this.offset.set(left - window.innerWidth / 2 + width / 2, -top + window.innerHeight / 2 - height / 2)
         }
     }

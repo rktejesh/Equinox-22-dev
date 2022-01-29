@@ -47,6 +47,12 @@
 			<div id="viewport" class="l-viewport">
 				<div class="l-wrapper">
 					<header class="header">
+						<button id="button-view__left">
+							Move
+						</button>
+						<button id="button-view__right">
+							Move
+						</button>
 						<div class="header--nav-toggle">
 							<span></span>
 						</div>
@@ -96,7 +102,7 @@
 							</div>
 						</li>
 						<li class="l-section section">
-							<div class="mainEvents">
+							<div class="mainEvents" id="mainEvents">
 								<main>
 									<div class="message">Please view on desktop.</div>
 									<h1 class="page-title | title">Equinox <span
@@ -359,10 +365,15 @@
 	<script src="src/js/main.js"></script>
 	<script>
 		$(window).on('load', function () {
-			setTimeout(removeLoader, 0);
+			setTimeout(removeLoader, 2000);
 		});
 		function removeLoader() {
-			$("#preloader").remove();
+			$("#preloader").animate({
+				opacity: 0,
+			}, 400, function () {
+				$("#preloader").remove();
+				// Animation complete.
+			});
 		}
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.js"

@@ -34,16 +34,12 @@ export default class Scene {
     constructor($scene) {
         this.container = $scene
         this.$tiles = document.querySelectorAll('.slideshow-list__el')
-
         this.W = window.innerWidth
         this.H = window.innerHeight
-
         this.mouse = new THREE.Vector2(0, 0)
         this.activeTile = null
         this.start()
-
         this.detailview = new DetailView()
-
         this.bindEvent()
     }
 
