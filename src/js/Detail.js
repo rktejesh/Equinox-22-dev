@@ -11,6 +11,7 @@ export default class DetailView {
             closeBtn: document.querySelector('.close-detail'),
             title: document.querySelector('.detail-view__title'),
             text: document.querySelector('.detail-view__text'),
+            button: document.querySelector('.wrapper'),
         }
         this.bindEvent()
     }
@@ -28,10 +29,10 @@ export default class DetailView {
 
     onOpen() {
         const title = this.$els.el.querySelector('.detail-view__title')
-        const text = this.$els.el.querySelector('.detail-view__text')
+        const text = this.$els.el.querySelector('.detail-view__text').querySelectorAll('p')
+        const button = this.$els.el.getElementsByClassName('.wrapper')
         const { title: pageTitle } = APP.Stage.$els
         this.stgs = new ST([title, text], { type: 'lines', linesClass: 'line' })
-
         this.stgs.lines.forEach((l) => {
             const div = document.createElement('div')
             div.classList.add('line-ctn')
@@ -55,6 +56,21 @@ export default class DetailView {
             force3D: true,
         })
 
+        /* TM.staggerFromTo(this.$els.button, 0.8, {
+            yPercent: 100,
+        }, {
+            yPercent: 0,
+            ease: Power3.easeInOut,
+            force3D: true,
+        }) */
+
+        TM.fromTo(this.$els.button, 1, {
+            alpha: 0,
+        }, {
+            alpha: 1,
+            force3D: true,
+        })
+
         TM.staggerFromTo(this.stgs.lines, 0.8, {
             yPercent: 100,
         }, {
@@ -68,9 +84,15 @@ export default class DetailView {
 
     onClose() {
         const { title: pageTitle } = APP.Stage.$els
-
         TM.to(pageTitle, 0.5, {
             alpha: 0.1,
+            force3D: true,
+        })
+
+        TM.fromTo(this.$els.button, 1, {
+            alpha: 1,
+        }, {
+            alpha: 0,
             force3D: true,
         })
 
@@ -101,10 +123,10 @@ export default class DetailView {
 
     toggleReveal({ shouldOpen, target }) {
         if (!shouldOpen) return
-        console.log(target.$els)
         this.$els.title.innerText = target.$els.title.outerText
         const a = target.$els.desc
-        $(this.$els.text).empty()
+        this.$els.text.innerHTML = ''
+        console.log(a)
         for (let i = 0; i < a.length; i++) {
             this.$els.text.append(a[i])
         }

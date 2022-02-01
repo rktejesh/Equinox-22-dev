@@ -587,6 +587,44 @@ canvas {
     transform: scale3d(1.1, 1.1, 1.1);
 }
 
+.mainEvents {
+    position: relative;
+    height: inherit;
+    width: inherit;
+    z-index: 0;
+}
+
+.eventsHover {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    display:flex;
+    justify-content: space-between;
+    z-index: 99;
+    pointer-events: none;
+}
+
+.eventsHover-1 {
+    width: 15%;
+    height: inherit;
+    pointer-events: all;
+}
+
+.eventsHover-1:hover {
+    cursor: zoom-in;
+}
+
+.eventsHover-2:hover {
+    cursor: zoom-in;
+}
+
+
+.eventsHover-2 {
+    width: 15%;
+    height: inherit;
+    pointer-events: all;
+}
+
 @media only screen and (max-width: 768px) {
     .mainEvents {
         display: none;

@@ -96,8 +96,9 @@ export default class Scene {
     }
 
     onToggleView({ target, open }) {
+        /*         const navigation = document.querySelector('.eventsHover')
+        navigation.style.display = 'none' */
         this.activeTile = target // !== undefined ? target : this.activeTile
-
         ev('lockScroll', { lock: open })
         ev('tile:zoom', { tile: this.activeTile, open })
     }

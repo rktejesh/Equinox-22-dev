@@ -2,6 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 const finalPath = path.resolve(__dirname, 'dist')
 
@@ -75,6 +76,13 @@ module.exports = {
         ],
     },
     plugins: [
+        new CompressionPlugin({
+            filename: '[path][base].gz',
+            algorithm: 'gzip',
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.8,
+        }),
         new CopyPlugin([
             { from: './src/fonts', to: path.join(finalPath, '/fonts'), force: true },
             { from: './src/img', to: path.join(finalPath, '/img'), force: true },

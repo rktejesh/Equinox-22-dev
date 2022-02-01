@@ -2,7 +2,6 @@
 import { TweenMax as TM } from 'gsap/all'
 import Scrollbar from 'smooth-scrollbar'
 import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll'
-import { Options } from 'smooth-scrollbar/options'
 import { map } from './utils/utils'
 
 import Scene from './Scene'
@@ -53,7 +52,7 @@ export default class Stage {
         this.Scroll.track.xAxis.element.remove()
         this.Scroll.track.yAxis.element.remove()
 
-        document.getElementById('button-view__right').addEventListener('click', () => {
+        document.getElementsByClassName('eventsHover-2')[0].addEventListener('click', () => {
             /* console.log(this.Scroll.scrollTop)
             console.log(this.Scroll.scrollLeft)
             this.Scroll.scrollTop += 100
@@ -74,7 +73,7 @@ export default class Stage {
             }
         })
 
-        document.getElementById('button-view__left').addEventListener('click', () => {
+        document.getElementsByClassName('eventsHover-1')[0].addEventListener('click', () => {
             for (let i = this.$tiles.length - 1; i >= 0; i--) {
                 console.log(this.Scroll.isVisible(this.$tiles[i]))
                 if (this.Scroll.isVisible(this.$tiles[i]) && i > 0) {
@@ -115,6 +114,10 @@ export default class Stage {
 
     lockScroll({ lock }) {
         const duration = lock ? 0 : 1.8
+
+        const navigation = document.querySelector('.eventsHover')
+        const display = lock ? 'none' : 'flex'
+        navigation.style.display = display
 
         TM.delayedCall(duration, () => {
             this.Scroll.updatePluginOptions('horizontalScroll', {
