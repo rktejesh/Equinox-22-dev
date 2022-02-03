@@ -2,150 +2,13 @@
 body {
   margin: 0;
   background-color: #000 !important;
+  overflow: hidden
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block
 }
 
-audio, canvas, progress, video {
-  display: inline-block;
-  vertical-align: baseline
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0
-}
-
-[hidden], template {
-  display: none
-}
-
-a {
-  background-color: transparent
-}
-
-a:active, a:hover {
-  outline: 0
-}
-
-abbr[title] {
-  border-bottom: 1px dotted
-}
-
-b, strong {
-  font-weight: bold
-}
-
-dfn {
-  font-style: italic
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0
-}
-
-mark {
-  background: #ff0;
-  color: #000
-}
-
-small {
-  font-size: 80%
-}
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline
-}
-
-sup {
-  top: -0.5em
-}
-
-sub {
-  bottom: -0.25em
-}
-
-img {
-  border: 0
-}
-
-svg:not(:root) {
-  overflow: hidden
-}
-
-figure {
-  margin: 1em 40px
-}
-
-hr {
-  box-sizing: content-box;
-  height: 0
-}
-
-pre {
-  overflow: auto
-}
-
-code, kbd, pre, samp {
-  font-family: monospace, monospace;
-  font-size: 1em
-}
-
-button, input, optgroup, select, textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0
-}
-
-button {
-  overflow: visible
-}
-
-button, select {
-  text-transform: none
-}
-
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer
-}
-
-button[disabled], html input[disabled] {
-  cursor: default
-}
-
-button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
-  padding: 0
-}
-
-input {
-  line-height: normal
-}
-
-input[type="checkbox"], input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0
-}
-
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
-  height: auto
-}
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  box-sizing: content-box
-}
-
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none
-}
 
 fieldset {
   border: 1px solid #c0c0c0;
@@ -205,9 +68,6 @@ body {
 
 body {
   background-color: #0c0c0c;
-  font-size: 14px;
-  line-height: 1.6;
-  font-family: "Montserrat", sans-serif;
   color: #000;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%
@@ -410,7 +270,7 @@ body {
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
-  background-color: #3D84B8;
+  background-color: #ffffff;
   border: none;
   opacity: 0;
   visibility: hidden;
@@ -507,7 +367,7 @@ body {
 }
 
 .side-nav li.is-active {
-  color: #3D84B8;
+  color: #ffffff;
   -webkit-transition: color .4s ease-in-out;
   transition: color .4s ease-in-out
 }
@@ -1729,4 +1589,187 @@ body {
 .contact--lockup .contact--whatsapp{
   padding-left: 3px;
   color: #4FCE5D;
+}
+
+
+/*  Team Starts */
+.team-members {
+  transform: rotate(-45deg);
+  flex-shrink: 0;
+}
+.team-members li > div {
+  float: left;
+  width: 20%;
+}
+
+.team-members li:nth-child(2n) > div:first-child {
+  margin-left: 20%;
+}
+
+.team-members li:last-child > div:first-child {
+  margin-left: 40%;
+}
+
+.member-details > div {
+  background-color: #ddd;
+  margin: 10px;
+}
+.member-details img {
+  transform: rotate(90deg) translate(0, 0);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.yuyu:hover img {
+  z-index: 2;
+}
+
+/* hover content - style */
+.member-details > div {
+  position: relative;
+  overflow: hidden;
+}
+
+.member-info {
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg) translate(-12px, 15px);
+  left: 0;
+  right: 0;
+  z-index: 0;
+  text-align: center;
+}
+
+.member-info h3,
+.member-info p {
+  margin: 0;
+  color: #000;
+  position: relative;
+  opacity: 1;
+}
+
+.member-info h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  top: 0;
+}
+
+.member-info p {
+  font-weight: 300;
+  font-size: 12px;
+  bottom: 0;
+}
+
+.member-details > div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 1;
+}
+
+/* hover content - onhover */
+.member-details *,
+.member-details > div:after {
+  cursor: pointer;
+  transition: all 0.4s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Team overview */
+.team-overview {
+  padding-right: 15px;
+}
+.team-overview h2 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.team-overview > a {
+  margin-bottom: 30px;
+  display: block;
+}
+
+.team-overview > a:before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  position: relative;
+  top: -3px;
+  margin-right: 5px;
+  background-color: #ccc;
+  display: inline-block;
+}
+
+/* For centering elements - optional - Can use table,tablecell instead */
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-center > div:first-child {
+  order: 2;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 992px) {
+  .sm-no-flex {
+    display: block;
+  }
+  .sm-no-float {
+    float: none !important;
+  }
+  .sm-text-center {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .team-members li {
+    text-align: center;
+  }
+  .team-members li > div {
+    float: none;
+    display: inline-block;
+    width: 30%;
+    margin: 0 !important;
+  }
+  .team-members {
+    transform: rotate(0);
+  }
+  .member-details img {
+    transform: rotate(0) translate(0, 0);
+  }
+  .team-overview {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .team-members li > div {
+    width: 48%;
+  }
+}
+
+.clearfix {
+  font-size: 0px;
+}
+
+.lele {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: rotate(315deg) scale(1.5);
+}
+
+.yuyu:hover .lele {
+  transform: translate(10%, -90%) rotate(235deg) scale(1.5);
 }
