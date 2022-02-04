@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable no-mixed-operators */
 /* eslint-disable no-undef */
 // @codekit-prepend "/vendor/hammer-2.0.8.js";
 

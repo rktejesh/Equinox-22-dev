@@ -2,7 +2,6 @@
 body {
   margin: 0;
   background-color: #000 !important;
-  overflow: hidden
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
@@ -1772,4 +1771,16 @@ body {
 
 .yuyu:hover .lele {
   transform: translate(10%, -90%) rotate(235deg) scale(1.5);
+}
+
+body
+{
+    overflow: hidden;
+}
+
+.scroll
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }

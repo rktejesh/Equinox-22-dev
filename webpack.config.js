@@ -8,7 +8,9 @@ const finalPath = path.resolve(__dirname, 'dist')
 
 module.exports = {
     mode: 'development',
-    entry: './src/js/index.js',
+    entry: {
+        app: ['./src/js/index.js', './src/js/functions.js', './src/js/main.js'],
+    },
     devtool: 'source-map',
     output: {
         path: finalPath,
@@ -76,13 +78,13 @@ module.exports = {
         ],
     },
     plugins: [
-        new CompressionPlugin({
+        /* new CompressionPlugin({
             filename: '[path][base].gz',
             algorithm: 'gzip',
             test: /\.js$|\.css$|\.html$/,
             threshold: 10240,
             minRatio: 0.8,
-        }),
+        }), */
         new CopyPlugin([
             { from: './src/fonts', to: path.join(finalPath, '/fonts'), force: true },
             { from: './src/img', to: path.join(finalPath, '/img'), force: true },

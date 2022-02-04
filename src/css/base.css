@@ -608,10 +608,9 @@ canvas {
 
 .team-page {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    flex-direction: row;
+    height: inherit;
+    justify-content: center
 }
 
 .team-page-div {
@@ -623,4 +622,26 @@ canvas {
 
 .team-page-info {
     font-size: large;
+}
+
+.about-us-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: inherit;
+}
+
+.grid-section {
+    width: inherit;
+    height: inherit;
+}
+
+.grid-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5em;
+    font-size: 1.8rem;
 }
