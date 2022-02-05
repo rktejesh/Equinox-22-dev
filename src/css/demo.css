@@ -261,7 +261,7 @@ body {
 }
 
 .grid__item--text {
-	font-size: 0.85em;
+	font-size: 1.85em;
 	line-height: 1.2;
 	display: flex;
 	color: inherit;
@@ -326,17 +326,17 @@ body {
 .grid--layout-1 .grid__item:nth-child(2) { grid-area: 22 / 6 / 28 / 10; background-image: url(../img/4.jpg); }
 .grid--layout-1 .grid__item:nth-child(3) { grid-area: 8 / 5 / 22 / 15; background-image: url(../img/6.jpg); }
 .grid--layout-1 .grid__item:nth-child(4) { grid-area: 22 / 10 / 29 / 15; background-image: url(../img/8.jpg); }
-.grid--layout-1 .grid__item:nth-child(5) { grid-area: 1 / 11 / 8 / 15; background-image: url(../img/10.jpg); }
+.grid--layout-1 .grid__item:nth-child(5) { grid-area: 1 / 8 / 8 / 15; background-image: url(../img/10.jpg); }
 .grid--layout-1 .grid__item:nth-child(6) { grid-area: 17 / 15 / 24 / 20; background-image: url(../img/12.jpg); }
 .grid--layout-1 .grid__item:nth-child(7) { grid-area: 9 / 15 / 17 / 23; background-image: url(../img/14.jpg); }
 .grid--layout-1 .grid__item:nth-child(8) { grid-area: 2 / 15 / 9 / 23; background-image: url(../img/16.jpg); }
 .grid--layout-1 .grid__item:nth-child(9) { grid-area: 17 / 20 / 22 / 26; background-image: url(../img/18.jpg); }
 .grid--layout-1 .grid__item:nth-child(10) { grid-area: 22 / 20 / 28 / 28; background-image: url(../img/20.jpg); }
-.grid--layout-1 .grid__item:nth-child(11) { grid-area: 4 / 23 / 11 / 27; background-image: url(../img/22.jpg); }
-.grid--layout-1 .grid__item:nth-child(12) { grid-area: 11 / 23 / 17	/ 30; background-image: url(../img/3.jpg); }
+.grid--layout-1 .grid__item:nth-child(11) { grid-area: 4 / 23 / 11 / 29; background-image: url(../img/22.jpg); }
+.grid--layout-1 .grid__item:nth-child(12) { grid-area: 11 / 23 / 17	/ 31; background-image: url(../img/3.jpg); }
 .grid--layout-1 .grid__item:nth-child(13) { grid-area: 17 / 26 / 22 / 32; background-image: url(../img/5.jpg); }
 .grid--layout-1 .grid__item--name { grid-area: 3 / 12 / 30 / 25; }
-.grid--layout-1 .grid__item--title { grid-area: 1 / 27 / 11 / 29; }
+.grid--layout-1 .grid__item--title { grid-area: 1 / 29 / 11 / 29; }
 .grid--layout-1 .grid__item--text { grid-area: 22 / 32 / 30 / 28; }
 .grid--layout-1 .grid__item--nav-prev { grid-area: 3 / 6 / 8 / 11; }
 .grid--layout-1 .grid__item--nav-next { grid-area: 24 / 15 / 29 / 20; }

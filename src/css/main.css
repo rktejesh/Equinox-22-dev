@@ -1419,7 +1419,7 @@ body {
   -webkit-transform: translateZ(0) translateX(0) rotateY(0deg);
   transform: translateZ(0) translateX(0) rotateY(0deg);
   min-height: 100%;
-  outline: 30px solid #3D84B8;
+  outline: 30px solid #ffffff87;
   -webkit-transition: -webkit-transform .4s;
   transition: -webkit-transform .4s;
   transition: transform .4s;
@@ -1447,7 +1447,7 @@ body {
 .effect-rotate-left--animate .container-menu {
   -webkit-transform: translateZ(-1000px) translateX(-20%) rotateY(30deg);
   transform: translateZ(-1000px) translateX(-20%) rotateY(30deg);
-  outline: 30px solid #3D84B8
+  outline: 30px solid #ffffff87
 }
 
 .outer-nav {
@@ -1461,7 +1461,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-align: center;
+  text-align: left;
   visibility: hidden;
   -webkit-transition: visibility 0s .2s;
   transition: visibility 0s .2s
@@ -1521,14 +1521,22 @@ body {
   position: absolute;
   /*allignment changed to bottom of the text for better view
   Fixed the blue hover's alignment in the perspective_left_rotate view*/
-  top: 95%;
+  top: 90%;
   left: 50%;
-  -webkit-transform: translate(-50%, -25%);
-  transform: translate(-50%, -25%);
-  width: 110%;
+  -webkit-transform: translate(-120%, -50%);
+  transform: translate(-120%, -50%);
+  width: 40%;
   height: 10px;
   opacity: 0;
-  background-color: #3D84B8
+  background-color: #ffffff;
+  transition: linear;
+  transition-duration: .5s;
+}
+
+.outer-nav>li:hover::before {
+  width: 50%;
+  -webkit-transform: translate(-95%, -50%);
+  transform: translate(-95%, -50%);
 }
 
 .outer-nav>li.is-active::before {

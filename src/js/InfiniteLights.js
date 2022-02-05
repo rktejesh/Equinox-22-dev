@@ -524,7 +524,6 @@ class LightsSticks {
     // The object is behind the camera before the vertex shader
     mesh.frustumCulled = false;
     // mesh.position.y = options.lightStickHeight / 2;
-    this.webgl.scene.add(mesh);
     this.mesh = mesh;
   }
   update(time) {

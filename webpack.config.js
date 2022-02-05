@@ -9,7 +9,7 @@ const finalPath = path.resolve(__dirname, 'dist')
 module.exports = {
     mode: 'development',
     entry: {
-        app: ['./src/js/index.js', './src/js/functions.js', './src/js/main.js'],
+        app: ['./src/js/index.js'],
     },
     devtool: 'source-map',
     output: {
@@ -36,7 +36,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.scss$/,
+                test: /\.scss$|\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
