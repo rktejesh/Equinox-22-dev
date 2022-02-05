@@ -1529,15 +1529,15 @@ body {
   height: 10px;
   opacity: 0;
   background-color: #ffffff;
-  transition: linear;
-  transition-duration: .5s;
+  /* transition: linear;
+  transition-duration: .5s; */
 }
 
-.outer-nav>li:hover::before {
+/* .outer-nav>li:hover::before {
   width: 50%;
   -webkit-transform: translate(-95%, -50%);
   transform: translate(-95%, -50%);
-}
+} */
 
 .outer-nav>li.is-active::before {
   opacity: 1
