@@ -653,10 +653,10 @@ canvas {
 .digit {
     display: inline-block;
     font-size: 200px;
-    color: rgba(23, 47, 184, 0.678);
+    color: #fff;
     height: 180px;
     line-height: 1;
-    font-family: 'Electrolize', sans-serif;
+    font-family: "Electrolize", sans-serif;
 }
 
 .time-part-wrapper {
@@ -672,7 +672,7 @@ canvas {
     position: absolute;
     top: 0px;
     right: -30px;
-    color: rgba(23, 47, 184, 0.678);
+    color: #fff;
     font-size: 200px;
     line-height: 0.9;
 }
@@ -921,7 +921,6 @@ canvas {
     width: 100%;
     position: relative;
     transform: scale(0.6);
-    background-color: #0000008a;
 }
 .time-wrapper:before,
 .time-wrapper:after {
@@ -964,3 +963,109 @@ canvas {
 .app__logo span > img {
     height: inherit;
 }
+
+#cursor,
+#follower {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#cursor {
+    background: rgb(255, 255, 255);
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    z-index: 1001;
+    opacity: 0;
+    transition: transform 0.5s;
+}
+
+#follower {
+    background: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: -15px 0 0 -15px;
+    z-index: 1000;
+    transition: transform 0.5s;
+}
+
+#follower.active {
+    transform: scale(2.4);
+    background: #00ccff;
+}
+
+#cursor.hide,
+#follower.hide {
+    display: none;
+}
+
+.date-badge {
+    display: block;
+    position: fixed;
+    left: 50px;
+    top: 0;
+    background-color: #000000;
+    z-index: 10000;
+}
+
+.date-badge svg {
+    height: 200px;
+}
+
+.date-badge::before {
+    content: "";
+    width: 104%;
+    height: 84%;
+    background-image: linear-gradient(
+        var(--rotate),
+        #5ddcff,
+        #3c67e3 43%,
+        #4e00c2
+    );
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.date-badge::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 93%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+        var(--rotate),
+        #5ddcff,
+        #3c67e3 43%,
+        #4e00c2
+    );
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }

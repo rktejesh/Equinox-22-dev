@@ -47,6 +47,8 @@
 </head>
 
 <body>
+	<div id="cursor"></div>
+	<div id="follower"></div>
 	<div id="preloader">
 		<div class="Loader" data-text="Loading">
 			<span class="Loader__Circle"></span>
@@ -59,28 +61,99 @@
 		<div class="container-menu">
 			<div class="outer-nav--return"></div>
 			<div id="viewport" class="l-viewport">
+				
 				<div class="l-wrapper">
 					<header class="header">
-						<div class="header--nav-toggle">
-							<span></span>
-						</div>
+						<a>
+							<div class="header--nav-toggle">
+								<span></span>
+							</div>
+						</a>
 					</header>
 					<ul class="l-main-content main-content">
 						<li class="l-section section section--is-active">
+							<div class="date-badge">
+								<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 101 183.06">
+									<defs>
+										<style>
+											.cls-1,
+											.cls-3 {
+												fill: #000000;
+											}
+			
+											.cls-1 {
+												stroke: #000000;
+											}
+			
+											.cls-1,
+											.cls-4,
+											.cls-5 {
+												stroke-miterlimit: 10;
+											}
+			
+											.cls-2 {
+												opacity: 0.6;
+											}
+			
+											.cls-4,
+											.cls-5 {
+												fill: none;
+											}
+			
+											.cls-4 {
+												stroke: #f1f2f2;
+												stroke-dasharray: 12;
+											}
+			
+											.cls-5 {
+												stroke: #fff;
+												stroke-dasharray: 6;
+											}
+			
+											.cls-6 {
+												font-size: 41px;
+											}
+			
+											.cls-6,
+											.cls-7 {
+												fill: #f1f2f2;
+												font-family: BungeeInline-Regular, Bungee Inline;
+											}
+			
+											.cls-7 {
+												font-size: 24px;
+											}
+			
+											.cls-8 {
+												letter-spacing: -0.01em;
+											}
+										</style>
+									</defs>
+									<polygon class="cls-1" points="0.5 0.5 100.5 0.5 100.5 157.01 50.5 182.5 0.5 155.65 0.5 0.5" />
+									<g class="cls-2">
+										<polygon class="cls-3"
+											points="2.65 3.31 96.86 3.31 96.86 153.69 50.5 177.18 2.65 152.16 2.65 3.31" />
+										<polygon class="cls-4"
+											points="2.65 3.31 96.86 3.31 96.86 153.69 50.5 177.18 2.65 152.16 2.65 3.31" />
+										<polygon class="cls-5"
+											points="2.65 3.31 96.86 3.31 96.86 153.69 50.5 177.18 2.65 152.16 2.65 3.31" />
+									</g>
+									<image width="1861" height="1391" transform="translate(11.42 19.65) scale(0.04)"
+										xlink:href="src/img/equinox.png" /><text class="cls-6"
+										transform="translate(13.1 120.91)">8-9</text><text class="cls-7"
+										transform="translate(9.6 144.69)">Apri<tspan class="cls-8" x="66.24" y="0">l</tspan></text>
+								</svg>
+							</div>
 							<div class="cda-removeleft cda-naked cda-noimg demo-4">
 								<main>
 									<div class="content">
 										<div id="app"></div>
 										<div class="min-vh-100 d-flex flex-column w-100">
 											<div
-												class="content__title-wrap flex-grow-1 d-flex align-items-end justify-content-center">
-												<span class="">
-													<img class="logo" width="502px" height="400px"
-														src="https://ik.imagekit.io/instaclone/equinox/equinox_qBRsMd4uBxz.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1643547338869" />
-													<!-- <h2 class="content__title">Equinox</h2> -->
-												<div class="app__content">
+												class="content__title-wrap flex-grow-1 d-flex align-items-center justify-content-center">
+												<!-- <div class="app__content">
 													<div class='time-wrapper'>
-														<div class="title title--medium" style="font-family: 'Electrolize';">April 8 - 10</div>
 														<div class='time-part-wrapper'>
 															<div class='time-part days tens'>
 																<div class='digit-wrapper'>
@@ -124,7 +197,6 @@
 															</div>
 															<div class='time-part minutes ones'>
 																<div class='digit-wrapper'>
-																	<span class='digit'>4</span>
 																	<span class='digit'>3</span>
 																	<span class='digit'>2</span>
 																	<span class='digit'>1</span>
@@ -208,8 +280,16 @@
 																</div>
 															</div>
 														</div>
+
 													</div>
-												</div>
+													<div class="title title--medium"
+														style="font-family: 'Electrolize';">April 8 - 10</div>
+												</div> -->
+												<span class="">
+													<img class="logo" width="502px" height="400px"
+														src="https://ik.imagekit.io/instaclone/equinox/equinox_qBRsMd4uBxz.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1643547338869" />
+													<!-- <h2 class="content__title">Equinox</h2> -->
+												</span>
 											</div>
 											<div class="d-flex justify-content-md-end justify-content-center p-3">
 												<div class="social-buttons">
@@ -240,7 +320,7 @@
 								</main>
 							</div>
 						</li>
-						<li class="l-section section">
+						<!-- <li class="l-section section">
 							<div class="mainEvents" id="mainEvents">
 								<div class="eventsHover">
 									<div class="eventsHover-1">
@@ -478,8 +558,8 @@
 									<canvas id="scene"></canvas>
 								</main>
 							</div>
-						</li>
-<!-- 						<li class="l-section section">
+						</li> -->
+						<!-- 						<li class="l-section section">
 							//TODO speakers
 						</li>
 						<li class="l-section section">
@@ -885,13 +965,13 @@
 			</div>
 		</div>
 		<ul class="outer-nav">
-			<li class="is-active">Home</li>
-			<li>Events</li>
-			<!-- <li>Speakers</li>
+			<li class="is-active"><a>Home</a></li>
+			<!-- <li>Events</li>
+			<li>Speakers</li>
 			<li>Timeline</li>
 			<li>Sponsors</li> -->
-			<li>About us</li>
-			<!-- <li>Team</li> -->
+			<li><a>About us</a></li>
+			<!--<li>Team</li> -->
 		</ul>
 	</div>
 
@@ -934,6 +1014,55 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.js"
 		integrity="sha512-s+Za9YjKdWb7RODdRba1tjg+6RqPPnB+c7mQywwtdvn59eZYNI53pLOsTp1M7dkznKcWw45tq6xAHh/i1kvL6A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		$(function () {
+			const cursor = $("#cursor");
+			const follower = $("#follower");
+			const iframes = document.querySelectorAll("iframe");
+
+			$(document).on("mousemove", function (e) {
+				const x = e.clientX;
+				const y = e.clientY;
+				cursor.css({
+					"opacity": "1",
+					"top": y + "px",
+					"left": x + "px"
+				});
+				setTimeout(function () {
+					follower.css({
+						"opacity": "0.5",
+						"top": y + "px",
+						"left": x + "px"
+					});
+				}, 100);//following speed
+			});
+
+			//on a
+			$("a").on({
+				"mouseenter": function () {
+					cursor.addClass("active");
+					follower.addClass("active");
+				},
+				"mouseleave": function () {
+					cursor.removeClass("active");
+					follower.removeClass("active");
+				}
+			});
+
+			//on iframe
+			$("iframe").on({
+				"mouseenter": function () {
+					cursor.addClass("hide");
+					follower.addClass("hide");
+				},
+				"mouseleave": function () {
+					cursor.removeClass("hide");
+					follower.removeClass("hide");
+				}
+			});
+		});
+
+	</script>
 </body>
 
 </html>
