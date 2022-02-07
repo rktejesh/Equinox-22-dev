@@ -72,7 +72,7 @@
 					</header>
 					<ul class="l-main-content main-content">
 						<li class="l-section section section--is-active">
-							<div class="date-badge">
+							<!-- <div class="date-badge">
 								<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
 									xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 101 183.06">
 									<defs>
@@ -144,7 +144,7 @@
 										transform="translate(13.1 120.91)">8-9</text><text class="cls-7"
 										transform="translate(9.6 144.69)">Apri<tspan class="cls-8" x="66.24" y="0">l</tspan></text>
 								</svg>
-							</div>
+							</div> -->
 							<div class="cda-removeleft cda-naked cda-noimg demo-4">
 								<main>
 									<div class="content">
@@ -325,7 +325,7 @@
 								</main>
 							</div>
 						</li>
-						<!-- <li class="l-section section">
+						<li class="l-section section">
 							<div class="mainEvents" id="mainEvents">
 								<div class="eventsHover">
 									<div class="eventsHover-1">
@@ -563,8 +563,8 @@
 									<canvas id="scene"></canvas>
 								</main>
 							</div>
-						</li> -->
-						<!-- 						<li class="l-section section">
+						</li>
+						<li class="l-section section">
 							//TODO speakers
 						</li>
 						<li class="l-section section">
@@ -572,7 +572,7 @@
 						</li>
 						<li class="l-section section">
 							//TODO sponsors
-						</li> -->
+						</li>
 						<li class="l-section section demo-3 js">
 							<svg class="hidden">
 								<symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -615,7 +615,7 @@
 										<h3 class="grid__item grid__item--title">IIIT Lucknow</h3>
 										<p class="grid__item grid__item--text">The Annual Technical Fest</p>
 									</div>
-									<div class="grid grid--layout-2">
+									<!-- <div class="grid grid--layout-2">
 										<div class="grid__item" data-delay="350" data-direction="ttb"></div>
 										<div class="grid__item" data-delay="20" data-direction="ttb"></div>
 										<div class="grid__item" data-direction="ttb"></div>
@@ -661,7 +661,7 @@
 										<p class="grid__item grid__item--text">Dignified teacakes air one's dirty linen
 											off
 											t'shop scouser quid pezzy little taking the mick</p>
-									</div>
+									</div> -->
 								</div>
 								<div class="grid-content">
 									<div class="title title--medium">
@@ -686,7 +686,7 @@
 								</div>
 							</div>
 						</li>
-						<!-- <li class="l-section section tttl">
+						<li class="l-section section tttl">
 							<div class="team-page">
 								<h1 class="title | page-title">TEAM</h1>
 								<div class="team-page-div">
@@ -964,19 +964,19 @@
 									</div>
 								</div>
 							</div>
-						</li> -->
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<ul class="outer-nav">
 			<li class="is-active"><a>Home</a></li>
-			<!-- <li>Events</li>
+			<li>Events</li>
 			<li>Speakers</li>
 			<li>Timeline</li>
-			<li>Sponsors</li> -->
+			<li>Sponsors</li>
 			<li><a>About us</a></li>
-			<!--<li>Team</li> -->
+			<li>Team</li>
 		</ul>
 	</div>
 
@@ -1001,6 +1001,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="src/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 	<script src="src/js/vendors/hammer-2.0.8.js"></script>
+	<script src="src/js/vendors/velocity.min.js"></script>
 	<script src="src/js/functions.js"></script>
 	<script src="src/js/main.js"></script>
 	<script>
@@ -1008,7 +1009,7 @@
 			setTimeout(removeLoader, 0);
 		});
 		function removeLoader() {
-			$("#preloader").animate({
+			$("#preloader").velocity({
 				opacity: 0,
 			}, 400, function () {
 				$("#preloader").remove();
