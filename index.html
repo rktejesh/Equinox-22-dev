@@ -27,8 +27,6 @@
 		var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
 		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
 	</script>
-	<link href="//db.onlinewebfonts.com/c/d03165bd677535fe8da7479e26b13180?family=AzoSansUberW01-Regular"
-		rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://use.typekit.net/lma7zwj.css">
 	<link rel="stylesheet" type="text/css" href="dist/app.css" />
 	<link rel="stylesheet" href="https://use.typekit.net/uok8swb.css">
@@ -666,20 +664,23 @@
 										EQUINOX 22
 									</div>
 									<div>
-										Equinox, IIIT Lucknow's annual tech fest is the epitome of celebrating all
-										things tech and beyond. Celebrating the coder, the reader, the learner, the
-										leader Equinox provides them a platform to showcase their ideas and build upon
-										them, to morph their unrelenting imagination into a reality.
-										This time all your joy, excitement and thriller will be quadrupled as we are
-										back with many more fun exciting contests for all students, experts and
-										beginners to code, learn and experience the wonders of technology. Exploring
-										space is an opportunity not only to discover new worlds and build advanced
-										technologies, but to work together toward a larger goal irrespective of
-										nationality, race, or gender.<br><br> This is the theme of Equinox 2022, an
-										event larger
-										than life itself, where we thrive to move forward together. To participate in
-										fest events you must be 18 years of age. For any queries, you can contact a team
-										member.
+										Equinox, the annual technical fest organized by IIIT Lucknow is back with its
+										third edition. With the theme of this year's Equinox'22 being "Embracing the
+										Nostalgia", we aim to take you back to the times as good as ever, with a new
+										version of you, the one that will triumph over all the hardships and help you
+										find a new epitome of hope and growth.<br>
+
+										Celebrating the coder, the reader, the learner, and the leader, Equinox provides
+										them a platform to showcase their ideas and build upon them, to morph their
+										unrelenting imagination into a reality. This time all your joy, excitement, and
+										thriller will be quadrupled as we are back with many more fun exciting contests
+										for all students, experts, and beginners to code, learn and experience the
+										wonders of technology.<br>
+
+										Equinox will take you on a 3-day journey filled with adventurous and educational
+										events that will drive you to think outside the box and leave you with a hue of
+										reminiscent memories. To participate in fest events you must be 18 years of age.
+										For any queries, you can contact a team member.<br>
 									</div>
 								</div>
 							</div>
@@ -1003,8 +1004,8 @@
 	<script src="src/js/functions.js"></script>
 	<script src="src/js/main.js"></script>
 	<script>
-		$(window).on('load', function () {
-			requestAnimationFrame(removeLoader, 0);
+		$(function () {
+			requestAnimationFrame(removeLoader, 3000);
 		});
 		function removeLoader() {
 			$("#preloader").velocity({
