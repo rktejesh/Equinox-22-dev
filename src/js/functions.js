@@ -117,7 +117,7 @@ $(document).ready(function () {
             const $right = $('.slider--item-right')
             const $item = $('.slider--item')
 
-            $('.slider').animate({ opacity : 0 }, 400)
+            $('.slider').velocity({ opacity : 0 }, 400)
 
             setTimeout(() => {
                 if ($this.hasClass('slider--next')) {
@@ -157,7 +157,7 @@ $(document).ready(function () {
                 }
             }, 400)
 
-            $('.slider').animate({ opacity : 1 }, 400)
+            $('.slider').velocity({ opacity : 1 }, 400)
         })
     }
 

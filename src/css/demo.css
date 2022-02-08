@@ -322,19 +322,19 @@ body {
 }
 
 /* Layout 1 */
-.grid--layout-1 .grid__item:first-child { grid-area: 11 / 1 / 17 / 5; background-image: url(../img/2.jpg); }
-.grid--layout-1 .grid__item:nth-child(2) { grid-area: 22 / 6 / 28 / 10; background-image: url(../img/4.jpg); }
-.grid--layout-1 .grid__item:nth-child(3) { grid-area: 8 / 5 / 22 / 15; background-image: url(../img/6.jpg); }
-.grid--layout-1 .grid__item:nth-child(4) { grid-area: 22 / 10 / 29 / 15; background-image: url(../img/8.jpg); }
-.grid--layout-1 .grid__item:nth-child(5) { grid-area: 1 / 8 / 8 / 15; background-image: url(../img/10.jpg); }
-.grid--layout-1 .grid__item:nth-child(6) { grid-area: 17 / 15 / 24 / 20; background-image: url(../img/12.jpg); }
-.grid--layout-1 .grid__item:nth-child(7) { grid-area: 9 / 15 / 17 / 23; background-image: url(../img/14.jpg); }
-.grid--layout-1 .grid__item:nth-child(8) { grid-area: 2 / 15 / 9 / 23; background-image: url(../img/16.jpg); }
-.grid--layout-1 .grid__item:nth-child(9) { grid-area: 17 / 20 / 22 / 26; background-image: url(../img/18.jpg); }
-.grid--layout-1 .grid__item:nth-child(10) { grid-area: 22 / 20 / 28 / 28; background-image: url(../img/20.jpg); }
-.grid--layout-1 .grid__item:nth-child(11) { grid-area: 4 / 23 / 11 / 29; background-image: url(../img/22.jpg); }
-.grid--layout-1 .grid__item:nth-child(12) { grid-area: 11 / 23 / 17	/ 31; background-image: url(../img/3.jpg); }
-.grid--layout-1 .grid__item:nth-child(13) { grid-area: 17 / 26 / 22 / 32; background-image: url(../img/5.jpg); }
+.grid--layout-1 .grid__item:first-child { grid-area: 11 / 1 / 17 / 5; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/2_p0_ZQ9n0I_t.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345115881); }
+.grid--layout-1 .grid__item:nth-child(2) { grid-area: 22 / 6 / 28 / 10; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/4_fACJmINm1.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345116208); }
+.grid--layout-1 .grid__item:nth-child(3) { grid-area: 8 / 5 / 22 / 15; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/6_54pQOPZ6LLA.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345116809); }
+.grid--layout-1 .grid__item:nth-child(4) { grid-area: 22 / 10 / 29 / 15; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/8_WalX3xfCN.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345117644); }
+.grid--layout-1 .grid__item:nth-child(5) { grid-area: 1 / 8 / 8 / 15; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/10__eRHP8AUd.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345117713); }
+.grid--layout-1 .grid__item:nth-child(6) { grid-area: 17 / 15 / 24 / 20; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/12_xDGirS45lVj.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345118062); }
+.grid--layout-1 .grid__item:nth-child(7) { grid-area: 9 / 15 / 17 / 23; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/14_dMmJKz6Qk.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345118818); }
+.grid--layout-1 .grid__item:nth-child(8) { grid-area: 2 / 15 / 9 / 23; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/16_FPT9w_L7u.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345119089); }
+.grid--layout-1 .grid__item:nth-child(9) { grid-area: 17 / 20 / 22 / 26; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/18_Xy4H_prqQ8x.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345119724); }
+.grid--layout-1 .grid__item:nth-child(10) { grid-area: 22 / 20 / 28 / 28; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/20_DWBmDjxbU.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345120358); }
+.grid--layout-1 .grid__item:nth-child(11) { grid-area: 4 / 23 / 11 / 29; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/22_8IpaflD86oV.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345120533); }
+.grid--layout-1 .grid__item:nth-child(12) { grid-area: 11 / 23 / 17	/ 31; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/3_7H5V7VLfN.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345115967); }
+.grid--layout-1 .grid__item:nth-child(13) { grid-area: 17 / 26 / 22 / 32; background-image: url(https://ik.imagekit.io/instaclone/equinox-about_us/5_ss_8roQoi.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1644345116548); }
 .grid--layout-1 .grid__item--name { grid-area: 3 / 12 / 30 / 25; }
 .grid--layout-1 .grid__item--title { grid-area: 1 / 29 / 11 / 29; }
 .grid--layout-1 .grid__item--text { grid-area: 22 / 32 / 30 / 28; }

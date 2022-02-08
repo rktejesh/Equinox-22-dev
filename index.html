@@ -47,6 +47,8 @@
 </head>
 
 <body>
+	<div id="cursor"></div>
+	<div id="follower"></div>
 	<div id="preloader">
 		<div class="Loader" data-text="Loading">
 			<span class="Loader__Circle"></span>
@@ -61,155 +63,229 @@
 			<div id="viewport" class="l-viewport">
 				<div class="l-wrapper">
 					<header class="header">
-						<div class="header--nav-toggle">
-							<span></span>
-						</div>
+						<a>
+							<div class="header--nav-toggle">
+								<span></span>
+							</div>
+						</a>
 					</header>
 					<ul class="l-main-content main-content">
 						<li class="l-section section section--is-active">
+							<!-- <div class="app__content" style="transform:translateZ(0)">
+										<div class='time-wrapper'>
+											<div class='time-part-wrapper'>
+												<div class='time-part days tens'>
+													<div class='digit-wrapper'>
+														<span class='digit'>0</span>
+														<span class='digit'>9</span>
+														<span class='digit'>8</span>
+														<span class='digit'>7</span>
+														<span class='digit'>6</span>
+														<span class='digit'>5</span>
+														<span class='digit'>4</span>
+														<span class='digit'>3</span>
+														<span class='digit'>2</span>
+														<span class='digit'>1</span>
+														<span class='digit'>0</span>
+													</div>
+												</div>
+												<div class='time-part days ones'>
+													<div class='digit-wrapper'>
+														<span class='digit'>0</span>
+														<span class='digit'>9</span>
+														<span class='digit'>8</span>
+														<span class='digit'>7</span>
+														<span class='digit'>6</span>
+														<span class='digit'>5</span>
+														<span class='digit'>4</span>
+														<span class='digit'>3</span>
+														<span class='digit'>2</span>
+														<span class='digit'>1</span>
+														<span class='digit'>0</span>
+													</div>
+												</div>
+											</div>
+											<div class='time-part-wrapper'>
+												<div class='time-part minutes tens'>
+													<div class='digit-wrapper'>
+														<span class='digit'>0</span>
+														<span class='digit'>2</span>
+														<span class='digit'>1</span>
+														<span class='digit'>0</span>
+													</div>
+												</div>
+												<div class='time-part minutes ones'>
+													<div class='digit-wrapper'>
+														<span class='digit'>3</span>
+														<span class='digit'>2</span>
+														<span class='digit'>1</span>
+														<span class='digit'>0</span>
+														<span class='digit'>9</span>
+														<span class='digit'>8</span>
+														<span class='digit'>7</span>
+														<span class='digit'>6</span>
+														<span class='digit'>5</span>
+														<span class='digit'>4</span>
+														<span class='digit'>3</span>
+														<span class='digit'>2</span>
+														<span class='digit'>1</span>
+														<span class='digit'>0</span>
+														<span class='digit'>9</span>
+														<span class='digit'>8</span>
+														<span class='digit'>7</span>
+														<span class='digit'>6</span>
+														<span class='digit'>5</span>
+														<span class='digit'>4</span>
+														<span class='digit'>3</span>
+														<span class='digit'>2</span>
+														<span class='digit'>1</span>
+														<span class='digit'>0</span>
+													</div>
+												</div>
+											</div>
+											<div class='time-part-wrapper'>
+												<div class='time-part seconds tens'>
+													<div class='digit-wrapper'>
+														<span class='digit'>0</span>
+														<span class='digit'>5</span>
+														<span class='digit'>4</span>
+														<span class='digit'>3</span>
+														<span class='digit'>2</span>
+														<span class='digit'>1</span>
+														<span class='digit'>0</span>
+													</div>
+												</div>
+												<div class='time-part seconds ones'>
+													<div class='digit-wrapper'>
+														<span class='digit'>0</span>
+														<span class='digit'>9</span>
+														<span class='digit'>8</span>
+														<span class='digit'>7</span>
+														<span class='digit'>6</span>
+														<span class='digit'>5</span>
+														<span class='digit'>4</span>
+														<span class='digit'>3</span>
+														<span class='digit'>2</span>
+														<span class='digit'>1</span>
+														<span class='digit'>0</span>
+													</div>
+												</div>
+											</div>
+											<div class='time-part-wrapper'>
+												<div class='time-part hundredths tens'>
+													<div class='digit-wrapper'>
+														<span class='digit'>0</span>
+														<span class='digit'>5</span>
+														<span class='digit'>4</span>
+														<span class='digit'>3</span>
+														<span class='digit'>2</span>
+														<span class='digit'>1</span>
+														<span class='digit'>0</span>
+													</div>
+												</div>
+												<div class='time-part hundredths ones'>
+													<div class='digit-wrapper'>
+														<span class='digit'>0</span>
+														<span class='digit'>9</span>
+														<span class='digit'>8</span>
+														<span class='digit'>7</span>
+														<span class='digit'>6</span>
+														<span class='digit'>5</span>
+														<span class='digit'>4</span>
+														<span class='digit'>3</span>
+														<span class='digit'>2</span>
+														<span class='digit'>1</span>
+														<span class='digit'>0</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> -->
+							<!-- <div class="date-badge">
+								<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 101 183.06">
+									<defs>
+										<style>
+											.cls-1,
+											.cls-3 {
+												fill: #000000;
+											}
+			
+											.cls-1 {
+												stroke: #000000;
+											}
+			
+											.cls-1,
+											.cls-4,
+											.cls-5 {
+												stroke-miterlimit: 10;
+											}
+			
+											.cls-2 {
+												opacity: 0.6;
+											}
+			
+											.cls-4,
+											.cls-5 {
+												fill: none;
+											}
+			
+											.cls-4 {
+												stroke: #f1f2f2;
+												stroke-dasharray: 12;
+											}
+			
+											.cls-5 {
+												stroke: #fff;
+												stroke-dasharray: 6;
+											}
+			
+											.cls-6 {
+												font-size: 41px;
+											}
+			
+											.cls-6,
+											.cls-7 {
+												fill: #f1f2f2;
+												font-family: BungeeInline-Regular, Bungee Inline;
+											}
+			
+											.cls-7 {
+												font-size: 24px;
+											}
+			
+											.cls-8 {
+												letter-spacing: -0.01em;
+											}
+										</style>
+									</defs>
+									<polygon class="cls-1" points="0.5 0.5 100.5 0.5 100.5 157.01 50.5 182.5 0.5 155.65 0.5 0.5" />
+									<g class="cls-2">
+										<polygon class="cls-3"
+											points="2.65 3.31 96.86 3.31 96.86 153.69 50.5 177.18 2.65 152.16 2.65 3.31" />
+										<polygon class="cls-4"
+											points="2.65 3.31 96.86 3.31 96.86 153.69 50.5 177.18 2.65 152.16 2.65 3.31" />
+										<polygon class="cls-5"
+											points="2.65 3.31 96.86 3.31 96.86 153.69 50.5 177.18 2.65 152.16 2.65 3.31" />
+									</g>
+									<image width="1861" height="1391" transform="translate(11.42 19.65) scale(0.04)"
+										xlink:href="src/img/equinox.png" /><text class="cls-6"
+										transform="translate(13.1 120.91)">8-9</text><text class="cls-7"
+										transform="translate(9.6 144.69)">Apri<tspan class="cls-8" x="66.24" y="0">l</tspan></text>
+								</svg>
+							</div> -->
 							<div class="cda-removeleft cda-naked cda-noimg demo-4">
 								<main>
 									<div class="content">
 										<div id="app"></div>
 										<div class="min-vh-100 d-flex flex-column w-100">
 											<div
-												class="content__title-wrap flex-grow-1 d-flex align-items-end justify-content-center">
+												class="content__title-wrap flex-grow-1 d-flex align-items-center justify-content-center">
 												<span class="">
 													<img class="logo" width="502px" height="400px"
 														src="https://ik.imagekit.io/instaclone/equinox/equinox_qBRsMd4uBxz.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1643547338869" />
 													<!-- <h2 class="content__title">Equinox</h2> -->
-												<div class="app__content">
-													<div class='time-wrapper'>
-														<div class="title title--medium" style="font-family: 'Electrolize';">April 8 - 10</div>
-														<div class='time-part-wrapper'>
-															<div class='time-part days tens'>
-																<div class='digit-wrapper'>
-																	<span class='digit'>0</span>
-																	<span class='digit'>9</span>
-																	<span class='digit'>8</span>
-																	<span class='digit'>7</span>
-																	<span class='digit'>6</span>
-																	<span class='digit'>5</span>
-																	<span class='digit'>4</span>
-																	<span class='digit'>3</span>
-																	<span class='digit'>2</span>
-																	<span class='digit'>1</span>
-																	<span class='digit'>0</span>
-																</div>
-															</div>
-															<div class='time-part days ones'>
-																<div class='digit-wrapper'>
-																	<span class='digit'>0</span>
-																	<span class='digit'>9</span>
-																	<span class='digit'>8</span>
-																	<span class='digit'>7</span>
-																	<span class='digit'>6</span>
-																	<span class='digit'>5</span>
-																	<span class='digit'>4</span>
-																	<span class='digit'>3</span>
-																	<span class='digit'>2</span>
-																	<span class='digit'>1</span>
-																	<span class='digit'>0</span>
-																</div>
-															</div>
-														</div>
-														<div class='time-part-wrapper'>
-															<div class='time-part minutes tens'>
-																<div class='digit-wrapper'>
-																	<span class='digit'>0</span>
-																	<span class='digit'>2</span>
-																	<span class='digit'>1</span>
-																	<span class='digit'>0</span>
-																</div>
-															</div>
-															<div class='time-part minutes ones'>
-																<div class='digit-wrapper'>
-																	<span class='digit'>4</span>
-																	<span class='digit'>3</span>
-																	<span class='digit'>2</span>
-																	<span class='digit'>1</span>
-																	<span class='digit'>0</span>
-																	<span class='digit'>9</span>
-																	<span class='digit'>8</span>
-																	<span class='digit'>7</span>
-																	<span class='digit'>6</span>
-																	<span class='digit'>5</span>
-																	<span class='digit'>4</span>
-																	<span class='digit'>3</span>
-																	<span class='digit'>2</span>
-																	<span class='digit'>1</span>
-																	<span class='digit'>0</span>
-																	<span class='digit'>9</span>
-																	<span class='digit'>8</span>
-																	<span class='digit'>7</span>
-																	<span class='digit'>6</span>
-																	<span class='digit'>5</span>
-																	<span class='digit'>4</span>
-																	<span class='digit'>3</span>
-																	<span class='digit'>2</span>
-																	<span class='digit'>1</span>
-																	<span class='digit'>0</span>
-																</div>
-															</div>
-														</div>
-														<div class='time-part-wrapper'>
-															<div class='time-part seconds tens'>
-																<div class='digit-wrapper'>
-																	<span class='digit'>0</span>
-																	<span class='digit'>5</span>
-																	<span class='digit'>4</span>
-																	<span class='digit'>3</span>
-																	<span class='digit'>2</span>
-																	<span class='digit'>1</span>
-																	<span class='digit'>0</span>
-																</div>
-															</div>
-															<div class='time-part seconds ones'>
-																<div class='digit-wrapper'>
-																	<span class='digit'>0</span>
-																	<span class='digit'>9</span>
-																	<span class='digit'>8</span>
-																	<span class='digit'>7</span>
-																	<span class='digit'>6</span>
-																	<span class='digit'>5</span>
-																	<span class='digit'>4</span>
-																	<span class='digit'>3</span>
-																	<span class='digit'>2</span>
-																	<span class='digit'>1</span>
-																	<span class='digit'>0</span>
-																</div>
-															</div>
-														</div>
-														<div class='time-part-wrapper'>
-															<div class='time-part hundredths tens'>
-																<div class='digit-wrapper'>
-																	<span class='digit'>0</span>
-																	<span class='digit'>5</span>
-																	<span class='digit'>4</span>
-																	<span class='digit'>3</span>
-																	<span class='digit'>2</span>
-																	<span class='digit'>1</span>
-																	<span class='digit'>0</span>
-																</div>
-															</div>
-															<div class='time-part hundredths ones'>
-																<div class='digit-wrapper'>
-																	<span class='digit'>0</span>
-																	<span class='digit'>9</span>
-																	<span class='digit'>8</span>
-																	<span class='digit'>7</span>
-																	<span class='digit'>6</span>
-																	<span class='digit'>5</span>
-																	<span class='digit'>4</span>
-																	<span class='digit'>3</span>
-																	<span class='digit'>2</span>
-																	<span class='digit'>1</span>
-																	<span class='digit'>0</span>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
+												</span>
 											</div>
 											<div class="d-flex justify-content-md-end justify-content-center p-3">
 												<div class="social-buttons">
@@ -233,6 +309,11 @@
 														aria-label="Twitter">
 														<i class="fab fa-twitter"></i>
 													</a>
+													<a href="https://www.facebook.com/equinox22"
+														class="social-buttons__button social-button social-button--facebook"
+														aria-label="Facebook">
+														<i class="fab fa-facebook"></i>
+													</a>
 												</div>
 											</div>
 										</div>
@@ -252,7 +333,7 @@
 								</div>
 								<main class="eventsContent">
 									<div class="message">Please view on desktop.</div>
-									<h1 class="page-title | title">Equinox <span
+									<h1 class="page-title | title" style="user-select: none;">Equinox <span
 											class="slideshow__title__offset | title__offset">Events</span></h1>
 									<section class="content | scrollarea-ctn">
 										<div class="scrollarea | slideshow">
@@ -479,7 +560,7 @@
 								</main>
 							</div>
 						</li>
-<!-- 						<li class="l-section section">
+						<li class="l-section section">
 							//TODO speakers
 						</li>
 						<li class="l-section section">
@@ -487,7 +568,7 @@
 						</li>
 						<li class="l-section section">
 							//TODO sponsors
-						</li> -->
+						</li>
 						<li class="l-section section demo-3 js">
 							<svg class="hidden">
 								<symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -530,24 +611,24 @@
 										<h3 class="grid__item grid__item--title">IIIT Lucknow</h3>
 										<p class="grid__item grid__item--text">The Annual Technical Fest</p>
 									</div>
-									<div class="grid grid--layout-2">
-										<div class="grid__item" data-delay="350" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="20" data-direction="ttb"></div>
-										<div class="grid__item" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="400" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="70" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="350" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="200" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="500" data-direction="ttb"></div>
-										<div class="grid__item" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="20" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="450" data-direction="ttb"></div>
-										<div class="grid__item" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="650" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="100" data-direction="ttb">
+									<!-- <div class="grid grid--layout-2">
+										<div class="grid__item" data-delay="350"></div>
+										<div class="grid__item" data-delay="20"></div>
+										<div class="grid__item"></div>
+										<div class="grid__item" data-delay="400"></div>
+										<div class="grid__item" data-delay="70"></div>
+										<div class="grid__item" data-delay="350"></div>
+										<div class="grid__item" data-delay="200"></div>
+										<div class="grid__item" data-delay="500"></div>
+										<div class="grid__item"></div>
+										<div class="grid__item" data-delay="20"></div>
+										<div class="grid__item" data-delay="450"></div>
+										<div class="grid__item"></div>
+										<div class="grid__item" data-delay="650"></div>
+										<div class="grid__item" data-delay="100">
 
 										</div>
-										<div class="grid__item" data-direction="ttb">
+										<div class="grid__item">
 
 										</div>
 										<h2 class="grid__item grid__item--name">Oyo<br /> Expo <br />2018</h2>
@@ -556,52 +637,55 @@
 											shepherd's pie bossy britches</p>
 									</div>
 									<div class="grid grid--layout-3">
-										<div class="grid__item" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="200" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="400" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="300" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="140" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="600" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="350" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="500" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="50" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="250" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="300" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="100" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="40" data-direction="ttb"></div>
-										<div class="grid__item" data-direction="ttb"></div>
-										<div class="grid__item" data-delay="40" data-direction="ttb"></div>
+										<div class="grid__item"></div>
+										<div class="grid__item" data-delay="200"></div>
+										<div class="grid__item" data-delay="400"></div>
+										<div class="grid__item" data-delay="300"></div>
+										<div class="grid__item" data-delay="140"></div>
+										<div class="grid__item" data-delay="600"></div>
+										<div class="grid__item" data-delay="350"></div>
+										<div class="grid__item" data-delay="500"></div>
+										<div class="grid__item" data-delay="50"></div>
+										<div class="grid__item" data-delay="250"></div>
+										<div class="grid__item" data-delay="300"></div>
+										<div class="grid__item" data-delay="100"></div>
+										<div class="grid__item" data-delay="40"></div>
+										<div class="grid__item"></div>
+										<div class="grid__item" data-delay="40"></div>
 										<h2 class="grid__item grid__item--name">Oyo<br /> Expo <br />2019</h2>
 										<h3 class="grid__item grid__item--title">Paris</h3>
 										<p class="grid__item grid__item--text">Dignified teacakes air one's dirty linen
 											off
 											t'shop scouser quid pezzy little taking the mick</p>
-									</div>
+									</div> -->
 								</div>
 								<div class="grid-content">
 									<div class="title title--medium">
 										EQUINOX 22
 									</div>
 									<div>
-										Equinox, IIIT Lucknow's annual tech fest is the epitome of celebrating all
-										things tech and beyond. Celebrating the coder, the reader, the learner, the
-										leader Equinox provides them a platform to showcase their ideas and build upon
-										them, to morph their unrelenting imagination into a reality.
-										This time all your joy, excitement and thriller will be quadrupled as we are
-										back with many more fun exciting contests for all students, experts and
-										beginners to code, learn and experience the wonders of technology. Exploring
-										space is an opportunity not only to discover new worlds and build advanced
-										technologies, but to work together toward a larger goal irrespective of
-										nationality, race, or gender.<br><br> This is the theme of Equinox 2022, an
-										event larger
-										than life itself, where we thrive to move forward together. To participate in
-										fest events you must be 18 years of age. For any queries, you can contact a team
-										member.
+										Equinox, the annual technical fest organized by IIIT Lucknow is back with its
+										third edition. With the theme of this year's Equinox'22 being "Embracing the
+										Nostalgia", we aim to take you back to the times as good as ever, with a new
+										version of you, the one that will triumph over all the hardships and help you
+										find a new epitome of hope and growth.<br><br>
+
+										Celebrating the coder, the reader, the learner, and the leader, Equinox provides
+										them a platform to showcase their ideas and build upon them, to morph their
+										unrelenting imagination into a reality. This time all your joy, excitement, and
+										thriller will be quadrupled as we are back with many more fun exciting contests
+										for all students, experts, and beginners to code, learn and experience the
+										wonders of technology.<br><br>
+
+										Equinox will take you on a 3-day journey filled with adventurous and educational
+										events that will drive you to think outside the box and leave you with a hue of
+										reminiscent memories. To participate in fest events you must be 18 years of age.
+										For any queries, you can contact a team member.<br><br>
 									</div>
 								</div>
 							</div>
 						</li>
-						<!-- <li class="l-section section tttl">
+						<li class="l-section section tttl">
 							<div class="team-page">
 								<h1 class="title | page-title">TEAM</h1>
 								<div class="team-page-div">
@@ -879,19 +963,19 @@
 									</div>
 								</div>
 							</div>
-						</li> -->
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<ul class="outer-nav">
-			<li class="is-active">Home</li>
-			<li>Events</li>
-			<!-- <li>Speakers</li>
-			<li>Timeline</li>
-			<li>Sponsors</li> -->
-			<li>About us</li>
-			<!-- <li>Team</li> -->
+			<li class="is-active"><a>Home</a></li>
+			<li style="pointer-events: none; color: #a6a6a6">Events</li>
+			<li style="pointer-events: none; color: #a6a6a6"">Speakers</li>
+			<li style="pointer-events: none; color: #a6a6a6"">Timeline</li>
+			<li style="pointer-events: none; color: #a6a6a6"">Sponsors</li>
+			<li><a>About us</a></li>
+			<li style="pointer-events: none; color: #a6a6a6"">Team</li>
 		</ul>
 	</div>
 
@@ -916,14 +1000,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="src/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 	<script src="src/js/vendors/hammer-2.0.8.js"></script>
+	<script src="src/js/vendors/velocity.min.js"></script>
 	<script src="src/js/functions.js"></script>
 	<script src="src/js/main.js"></script>
 	<script>
-		$(window).on('load', function () {
-			setTimeout(removeLoader, 0);
+		$(function () {
+			requestAnimationFrame(removeLoader, 3000);
 		});
 		function removeLoader() {
-			$("#preloader").animate({
+			$("#preloader").velocity({
 				opacity: 0,
 			}, 400, function () {
 				$("#preloader").remove();
@@ -934,6 +1019,63 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.js"
 		integrity="sha512-s+Za9YjKdWb7RODdRba1tjg+6RqPPnB+c7mQywwtdvn59eZYNI53pLOsTp1M7dkznKcWw45tq6xAHh/i1kvL6A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		$(function () {
+			const cursor = $("#cursor");
+			const follower = $("#follower");
+			const iframes = document.querySelectorAll("iframe");
+
+			$(document).on("mousemove", function (e) {
+				const x = e.clientX;
+				const y = e.clientY;
+				/* requestAnimationFrame(function () {
+					cursor.css({
+						"opacity": "1",
+						"top": y + "px",
+						"left": x + "px",
+						"transform": "translate(" + x + "px, " + y +"px)"
+					});
+				}) */
+				cursor.css({
+					"opacity": "1",
+					"top": y + "px",
+					"left": x + "px",
+				});
+				setTimeout(function () {
+					follower.css({
+						"opacity": "0.5",
+						"top": y + "px",
+						"left": x + "px"
+					});
+				}, 50);//following speed
+			});
+
+			//on a
+			$("a").on({
+				"mouseenter": function () {
+					cursor.addClass("active");
+					follower.addClass("active");
+				},
+				"mouseleave": function () {
+					cursor.removeClass("active");
+					follower.removeClass("active");
+				}
+			});
+
+			//on iframe
+			$("iframe").on({
+				"mouseenter": function () {
+					cursor.addClass("hide");
+					follower.addClass("hide");
+				},
+				"mouseleave": function () {
+					cursor.removeClass("hide");
+					follower.removeClass("hide");
+				}
+			});
+		});
+
+	</script>
 </body>
 
 </html>

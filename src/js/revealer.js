@@ -40,7 +40,7 @@
         toggle(animationOpts, action) {
             return new Promise((resolve, reject) => {
                 if (animationOpts) {
-                    this.animate(animationOpts, action)
+                    this.velocity(animationOpts, action)
                     this.revealerEl.addEventListener('animationend', resolve)
                 } else {
                     this.revealerEl.classList.remove(...this.allClasses)
@@ -55,12 +55,12 @@
                 this.hide()
                 animation.target = this.DOM.item
                 animation.target.style.visibility = 'hidden'
-                this.animate(animation, 'hide')
+                this.velocity(animation, 'hide')
 
                 const completefn = () => {
                     animation.target.removeEventListener('animationend', completefn)
                     animation.target = this.revealerEl
-                    this.animate(animation, 'show')
+                    this.velocity(animation, 'show')
                     animation.target.addEventListener('animationend', (ev) => {
                         if (ev.target === animation.target) {
                             resolve()
@@ -73,12 +73,12 @@
 
         hideFilled(animation) {
             return new Promise((resolve, reject) => {
-                this.animate(animation, 'hide')
+                this.velocity(animation, 'hide')
 
                 const completefn = () => {
                     this.revealerEl.removeEventListener('animationend', completefn)
                     animation.target = this.DOM.item
-                    this.animate(animation, 'show')
+                    this.velocity(animation, 'show')
                     animation.target.addEventListener('animationend', (ev) => {
                         if (ev.target === animation.target) {
                             resolve()
