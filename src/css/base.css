@@ -373,7 +373,7 @@ canvas {
         font-size: 50px;
     }
     .logo {
-        width: 302px;
+        width: 250px;
         height: 200px;
     }
 }
@@ -644,6 +644,16 @@ canvas {
     flex-direction: column;
     margin-right: 5em;
     font-size: 1.8rem;
+}
+
+@media (max-width: 600px) {
+    .grid-content {
+        width: 100%;
+        margin-right: 0;
+        padding: 2em;
+        text-align: center;
+        font-size: small;
+    }
 }
 
 /* COuntDOwn */

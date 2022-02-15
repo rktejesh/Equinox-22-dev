@@ -47,8 +47,6 @@
 </head>
 
 <body>
-	<div id="cursor"></div>
-	<div id="follower"></div>
 	<div id="preloader">
 		<div class="Loader" data-text="Loading">
 			<span class="Loader__Circle"></span>
@@ -970,12 +968,12 @@
 		</div>
 		<ul class="outer-nav">
 			<li class="is-active"><a>Home</a></li>
-			<li style="pointer-events: none; color: #a6a6a6">Events</li>
-			<li style="pointer-events: none; color: #a6a6a6"">Speakers</li>
-			<li style="pointer-events: none; color: #a6a6a6"">Timeline</li>
-			<li style="pointer-events: none; color: #a6a6a6"">Sponsors</li>
+			<li style=" color: #a6a6a6">Events</li>
+			<li style="color: #a6a6a6">Speakers</li>
+			<li style="color: #a6a6a6">Timeline</li>
+			<li style="color: #a6a6a6">Sponsors</li>
 			<li><a>About us</a></li>
-			<li style="pointer-events: none; color: #a6a6a6"">Team</li>
+			<li style="color: #a6a6a6">Team</li>
 		</ul>
 	</div>
 
@@ -1019,63 +1017,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.js"
 		integrity="sha512-s+Za9YjKdWb7RODdRba1tjg+6RqPPnB+c7mQywwtdvn59eZYNI53pLOsTp1M7dkznKcWw45tq6xAHh/i1kvL6A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script>
-		$(function () {
-			const cursor = $("#cursor");
-			const follower = $("#follower");
-			const iframes = document.querySelectorAll("iframe");
-
-			$(document).on("mousemove", function (e) {
-				const x = e.clientX;
-				const y = e.clientY;
-				/* requestAnimationFrame(function () {
-					cursor.css({
-						"opacity": "1",
-						"top": y + "px",
-						"left": x + "px",
-						"transform": "translate(" + x + "px, " + y +"px)"
-					});
-				}) */
-				cursor.css({
-					"opacity": "1",
-					"top": y + "px",
-					"left": x + "px",
-				});
-				setTimeout(function () {
-					follower.css({
-						"opacity": "0.5",
-						"top": y + "px",
-						"left": x + "px"
-					});
-				}, 50);//following speed
-			});
-
-			//on a
-			$("a").on({
-				"mouseenter": function () {
-					cursor.addClass("active");
-					follower.addClass("active");
-				},
-				"mouseleave": function () {
-					cursor.removeClass("active");
-					follower.removeClass("active");
-				}
-			});
-
-			//on iframe
-			$("iframe").on({
-				"mouseenter": function () {
-					cursor.addClass("hide");
-					follower.addClass("hide");
-				},
-				"mouseleave": function () {
-					cursor.removeClass("hide");
-					follower.removeClass("hide");
-				}
-			});
-		});
-
-	</script>
 </body>
 
 </html>

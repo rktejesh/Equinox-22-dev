@@ -3,14 +3,9 @@
     src: url(/dist/fonts/Azonix.otf);
 }
 
-* {
-    cursor: none !important;
-}
-
 body {
     margin: 0;
     background-color: #000 !important;
-    cursor: none !important;
 }
 
 article,
@@ -1526,8 +1521,6 @@ body {
 .outer-nav > li {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-transform: translateX(350px) translateZ(-1000px);
-    transform: translateX(350px) translateZ(-1000px);
     font-size: 55px;
     font-weight: 900;
     color: #fff;
@@ -1587,8 +1580,36 @@ body {
 }
 
 @media (max-width: 600px) {
+    .outer-nav > li.is-vis {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+
+    .outer-nav > li::before {
+        /*allignment changed to bottom of the text for better view
+      Fixed the blue hover's alignment in the perspective_left_rotate view*/
+        left: 30%;
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+        /* transition: linear;
+      transition-duration: .5s; */
+    }
+
+    .outer-nav {
+        text-align: center;
+        left: 33%;
+    }
+
     .outer-nav > li {
         font-size: 34px;
+    }
+
+    .effect-rotate-left--animate .container-menu {
+        -webkit-transform: translateZ(-1000px) translateX(-20%) rotateY(30deg);
+        transform: translateZ(-730px) translateX(0%) rotateY(0deg);
+        outline: 30px solid #ffffff87;
+        filter: blur(30px);
     }
 }
 
@@ -1815,14 +1836,4 @@ body {
 
 .yuyu:hover .lele {
     transform: translate(10%, -90%) rotate(235deg) scale(1.5);
-}
-
-body {
-    overflow: hidden;
-}
-
-.scroll {
-    position: fixed;
-    bottom: 0;
-    left: 0;
 }
